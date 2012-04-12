@@ -33,15 +33,15 @@ THE SOFTWARE.
 #include "ccMacros.h"
 #include <algorithm>
 
+namespace   cocos2d {
+    
 /**
  * Used for sort
  */
 static bool less(const cocos2d::CCTouchHandler *p1, const cocos2d::CCTouchHandler *p2)
 {
-	return ((cocos2d::CCTouchHandler*)p1)->getPriority() < ((cocos2d::CCTouchHandler*)p2)->getPriority();
+    return ((cocos2d::CCTouchHandler*)p1)->getPriority() < ((cocos2d::CCTouchHandler*)p2)->getPriority();
 }
-
-namespace   cocos2d {
 
 bool CCTouchDispatcher::isDispatchEvents(void)
 {

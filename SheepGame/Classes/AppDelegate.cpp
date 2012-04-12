@@ -10,6 +10,7 @@
 
 #include "cocos2d.h"
 #include "HelloWorldScene.h"
+#include "FirstScene.h"
 
 USING_NS_CC;
 
@@ -90,7 +91,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 	pDirector->setAnimationInterval(1.0 / 60);
 
 	// create a scene. it's an autorelease object
-	CCScene *pScene = HelloWorld::scene();
+	CCScene *pScene = FirstScene::scene();
 
 	// run
 	pDirector->runWithScene(pScene);

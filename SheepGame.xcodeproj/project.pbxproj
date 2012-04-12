@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9044A16415367B2500C3F855 /* FirstScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9044A16215367B2500C3F855 /* FirstScene.cpp */; };
+		9044A16815367B6E00C3F855 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9044A16715367B6E00C3F855 /* boy.png */; };
+		9044A1731536875A00C3F855 /* SGScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9044A1711536875A00C3F855 /* SGScene.cpp */; };
+		9044A17615368CF700C3F855 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9044A17415368CF700C3F855 /* Actor.cpp */; };
+		9044A17915369BE900C3F855 /* Boy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9044A17715369BE900C3F855 /* Boy.cpp */; };
+		9044A17C15369D8B00C3F855 /* Sheep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9044A17A15369D8B00C3F855 /* Sheep.cpp */; };
+		9044A1801536A30300C3F855 /* sheep.png in Resources */ = {isa = PBXBuildFile; fileRef = 9044A17F1536A30300C3F855 /* sheep.png */; };
 		90F96264153675B700F676A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F96263153675B700F676A0 /* QuartzCore.framework */; };
 		90F96266153675B700F676A0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F96265153675B700F676A0 /* OpenGLES.framework */; };
 		90F96268153675B700F676A0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F96267153675B700F676A0 /* OpenAL.framework */; };
@@ -143,6 +150,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9044A16215367B2500C3F855 /* FirstScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirstScene.cpp; sourceTree = "<group>"; };
+		9044A16315367B2500C3F855 /* FirstScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScene.h; sourceTree = "<group>"; };
+		9044A16715367B6E00C3F855 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boy.png; path = Resources/sprites/boy.png; sourceTree = "<group>"; };
+		9044A17015367E6600C3F855 /* SheepGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SheepGame.h; sourceTree = "<group>"; };
+		9044A1711536875A00C3F855 /* SGScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SGScene.cpp; sourceTree = "<group>"; };
+		9044A1721536875A00C3F855 /* SGScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGScene.h; sourceTree = "<group>"; };
+		9044A17415368CF700C3F855 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		9044A17515368CF700C3F855 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		9044A17715369BE900C3F855 /* Boy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boy.cpp; sourceTree = "<group>"; };
+		9044A17815369BE900C3F855 /* Boy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boy.h; sourceTree = "<group>"; };
+		9044A17A15369D8B00C3F855 /* Sheep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sheep.cpp; sourceTree = "<group>"; };
+		9044A17B15369D8B00C3F855 /* Sheep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sheep.h; sourceTree = "<group>"; };
+		9044A17F1536A30300C3F855 /* sheep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sheep.png; path = Resources/sprites/sheep.png; sourceTree = "<group>"; };
 		90F9625F153675B700F676A0 /* SheepGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SheepGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F96263153675B700F676A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		90F96265153675B700F676A0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -442,6 +462,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9044A16615367B6200C3F855 /* sprites */ = {
+			isa = PBXGroup;
+			children = (
+				9044A17F1536A30300C3F855 /* sheep.png */,
+				9044A16715367B6E00C3F855 /* boy.png */,
+			);
+			name = sprites;
+			sourceTree = "<group>";
+		};
+		9044A16915367D7900C3F855 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+				9044A17415368CF700C3F855 /* Actor.cpp */,
+				9044A17515368CF700C3F855 /* Actor.h */,
+				9044A17715369BE900C3F855 /* Boy.cpp */,
+				9044A17815369BE900C3F855 /* Boy.h */,
+				9044A17A15369D8B00C3F855 /* Sheep.cpp */,
+				9044A17B15369D8B00C3F855 /* Sheep.h */,
+			);
+			name = Actors;
+			sourceTree = "<group>";
+		};
 		90F96254153675B600F676A0 = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +531,7 @@
 		90F96274153675B700F676A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9044A16615367B6200C3F855 /* sprites */,
 				90F96275153675B700F676A0 /* CloseNormal.png */,
 				90F96277153675B700F676A0 /* CloseSelected.png */,
 				90F96279153675B700F676A0 /* Default.png */,
@@ -1014,12 +1057,34 @@
 		90F96419153675B900F676A0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9044A16915367D7900C3F855 /* Actors */,
+				90F9642815367A0400F676A0 /* Scenes */,
+				90F96425153679DB00F676A0 /* Boilerplate */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		90F96425153679DB00F676A0 /* Boilerplate */ = {
+			isa = PBXGroup;
+			children = (
 				90F9641A153675B900F676A0 /* AppDelegate.h */,
 				90F9641B153675B900F676A0 /* AppDelegate.cpp */,
 				90F9641D153675B900F676A0 /* HelloWorldScene.h */,
 				90F9641E153675B900F676A0 /* HelloWorldScene.cpp */,
+				9044A17015367E6600C3F855 /* SheepGame.h */,
 			);
-			name = Classes;
+			name = Boilerplate;
+			sourceTree = "<group>";
+		};
+		90F9642815367A0400F676A0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9044A1711536875A00C3F855 /* SGScene.cpp */,
+				9044A1721536875A00C3F855 /* SGScene.h */,
+				9044A16215367B2500C3F855 /* FirstScene.cpp */,
+				9044A16315367B2500C3F855 /* FirstScene.h */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1084,6 +1149,8 @@
 				90F96286153675B700F676A0 /* Icon.png in Resources */,
 				90F96288153675B700F676A0 /* Icon@2x.png in Resources */,
 				90F9628B153675B700F676A0 /* iTunesArtwork in Resources */,
+				9044A16815367B6E00C3F855 /* boy.png in Resources */,
+				9044A1801536A30300C3F855 /* sheep.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1208,6 +1275,11 @@
 				90F96418153675B900F676A0 /* RootViewController.mm in Sources */,
 				90F9641C153675B900F676A0 /* AppDelegate.cpp in Sources */,
 				90F9641F153675B900F676A0 /* HelloWorldScene.cpp in Sources */,
+				9044A16415367B2500C3F855 /* FirstScene.cpp in Sources */,
+				9044A1731536875A00C3F855 /* SGScene.cpp in Sources */,
+				9044A17615368CF700C3F855 /* Actor.cpp in Sources */,
+				9044A17915369BE900C3F855 /* Boy.cpp in Sources */,
+				9044A17C15369D8B00C3F855 /* Sheep.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1321,6 +1393,7 @@
 				90F96424153675B900F676A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
