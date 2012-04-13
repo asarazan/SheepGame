@@ -11,20 +11,20 @@
 
 #include "SheepGame.h"
 
-class SGScene;
+class Stage;
 
 class Actor : public Sprite, public cocos2d::CCTouchDelegate {
     
 public:
-    virtual bool init(SGScene * scene);
+    virtual bool init(Stage * stage);
+    virtual void touch();
+    virtual bool ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
     
 protected:
     virtual void tick(cocos2d::ccTime dt);
-    virtual void touch();
     virtual const String getImageName() = 0;
     
 private:    
-	virtual void ccTouchesBegan(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
 };
 
 #endif

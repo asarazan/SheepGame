@@ -11,7 +11,7 @@
 
 #include "Actor.h"
 
-class SGScene;
+class Stage;
 class Boy;
 
 class Sheep : public Actor {
@@ -21,12 +21,12 @@ private:
     void moveToBoy();
     
 public:
-    virtual bool init(SGScene * scene, Boy * boy);
+    virtual bool init(Stage * stage, Boy * boy);
+    virtual void touch();
     
 protected:
     virtual void tick(cocos2d::ccTime dt);
     virtual const String getImageName();
-    virtual void touch();
     virtual ~Sheep();
 };
 

@@ -7,22 +7,35 @@
 //
 
 #include "Actor.h"
-#include "SGScene.h"
+#include "Stage.h"
 #include "cocos2d.h"
 
 using namespace cocos2d;
 
-bool Actor::init(SGScene * scene) {
+bool Actor::init(Stage * stage) {
     String imageName = getImageName();    
     if (!cocos2d::CCSprite::initWithFile(imageName.c_str())) {
         return false;
     }
     
-    scene->addActor(this);    
+    stage->addActor(this);    
     schedule(schedule_selector(Actor::tick), 0);
-    
+        
     CCTouchDispatcher::sharedDispatcher()->addTargetedDelegate(this, 0, true);
     
+    return true;
+}
+
+bool Actor::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent) {
+    CCRect box = this->boundingBox();
+    CCPoint point = pTouch->locationInView();
+    point = CCDirector::sharedDirector()->convertToGL(point);
+    
+    if (!CCRect::CCRectContainsPoint(box, point)) {
+        return false;
+    }
+    
+    this->touch();
     return true;
 }
 
@@ -32,8 +45,4 @@ void Actor::tick(cocos2d::ccTime dt) {
 
 void Actor::touch() {
     
-}
-
-void Actor::ccTouchesBegan(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent) {
-    touch();
 }

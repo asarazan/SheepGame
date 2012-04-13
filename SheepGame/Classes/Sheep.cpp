@@ -11,8 +11,8 @@
 
 using namespace cocos2d;
 
-bool Sheep::init(SGScene * scene, Boy * boy) {
-    if (!Actor::init(scene)) {
+bool Sheep::init(Stage * stage, Boy * boy) {
+    if (!Actor::init(stage)) {
         return false;
     }
     
