@@ -10,7 +10,7 @@
 
 #include "ChaseStage.h"
 #include "Actor.h"
-#include "Boy.h"
+#include "RunningWolf.h"
 
 bool ChaseStage::init() {
     if (!Stage::init()) {
@@ -29,11 +29,7 @@ bool ChaseStage::init() {
     m_bgNode = CCParallaxNodeExtras::node();
     m_bgNode->retain();
     this->addChild(m_bgNode);
-    
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Chase.plist");
-    CCSpriteBatchNode * batch = CCSpriteBatchNode::batchNodeWithFile("Chase.png");
-    this->cocos2d::CCNode::addChild(batch);
-    
+        
     static const float designWith = 480;
     static const float designHeight = 320;    
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
@@ -100,32 +96,23 @@ bool ChaseStage::init() {
         } while (offset.x < (winSize.width + (sprite->getContentSize().width * 2)));
     }
     
-    CCMutableArray<CCSpriteFrame*> frames;
-    for (int i = 0; i < 5; ++i) {
-        char name[11];
-        sprintf(name, "wolf_%i.png",i);
-        name[10] = '\0';
-        frames.addObject(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(name));
-    }
+    m_wolf = RunningWolf::wolfWithStage(this);
+    m_wolf->setScale(scale * 2);
+    m_wolf->retain();
     
-    CCSprite * bg = (CCSprite*)m_bgs->objectAtIndex(0);
-    CCPoint bgPos = bg->getPosition();
-    
-    CCAnimation * anim = CCAnimation::animationWithFrames(&frames, 0.1f);
-    CCSprite * wolf = CCSprite::spriteWithSpriteFrameName("wolf_0.png");
-    
-    float xWolf = winSize.width * 0.1;
-//    float yWolf = bg->getPosition().y + (wolf->getContentSize().height * 0.5);
-    float yWolf = winSize.height * 0.1;
-    
-    wolf->setPosition(ccp(xWolf, yWolf));
-    
-    CCAction * runAction = CCRepeatForever::actionWithAction(CCAnimate::actionWithAnimation(anim, false));
-    wolf->runAction(runAction);
-    batch->addChild(wolf);
-        
+    float xWolf = winSize.width * 0.1 + m_wolf->getContentSize().width * 0.5;
+    float yWolf = (winSize.height * 0.1) + m_wolf->getContentSize().height * 0.5;    
+    m_wolf->setPosition(ccp(xWolf, yWolf));       
+       
     this->scheduleUpdate();
+    CCTouchDispatcher::sharedDispatcher()->addTargetedDelegate(this, 0, true);
     
+    return true;
+}
+
+bool ChaseStage::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent) {
+    Stage::ccTouchBegan(pTouch, pEvent);    
+    m_wolf->jump();
     return true;
 }
 
@@ -177,4 +164,12 @@ Scene * ChaseStage::scene() {
     scene->addChild(layer);
     
     return scene;
+}
+
+ChaseStage::~ChaseStage() {
+    m_bgNode->release();
+    m_bgs->release();
+    m_clouds->release();
+    m_mountains->release();
+    m_wolf->release();
 }

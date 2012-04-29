@@ -28,6 +28,7 @@
 		90B91B5B154D17C6000863DB /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B91B51154D17C6000863DB /* sky.png */; };
 		90B91B5D154D1AE0000863DB /* Chase.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B91B5C154D1AE0000863DB /* Chase.png */; };
 		90B91B5F154D1BD5000863DB /* Chase.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90B91B5E154D1BD5000863DB /* Chase.plist */; };
+		90B91B65154DC3D6000863DB /* RunningWolf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90B91B63154DC3D6000863DB /* RunningWolf.cpp */; };
 		90F96264153675B700F676A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F96263153675B700F676A0 /* QuartzCore.framework */; };
 		90F96266153675B700F676A0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F96265153675B700F676A0 /* OpenGLES.framework */; };
 		90F96268153675B700F676A0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F96267153675B700F676A0 /* OpenAL.framework */; };
@@ -193,6 +194,8 @@
 		90B91B51154D17C6000863DB /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sky.png; path = Resources/sky.png; sourceTree = "<group>"; };
 		90B91B5C154D1AE0000863DB /* Chase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chase.png; path = Resources/Chase.png; sourceTree = "<group>"; };
 		90B91B5E154D1BD5000863DB /* Chase.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Chase.plist; path = Resources/Chase.plist; sourceTree = "<group>"; };
+		90B91B63154DC3D6000863DB /* RunningWolf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RunningWolf.cpp; sourceTree = "<group>"; };
+		90B91B64154DC3D6000863DB /* RunningWolf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunningWolf.h; sourceTree = "<group>"; };
 		90F9625F153675B700F676A0 /* SheepGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SheepGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F96263153675B700F676A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		90F96265153675B700F676A0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -501,6 +504,8 @@
 				9044A18D1537FBBF00C3F855 /* Boy.h */,
 				9044A18E1537FBBF00C3F855 /* Sheep.cpp */,
 				9044A18F1537FBBF00C3F855 /* Sheep.h */,
+				90B91B63154DC3D6000863DB /* RunningWolf.cpp */,
+				90B91B64154DC3D6000863DB /* RunningWolf.h */,
 			);
 			name = Actors;
 			sourceTree = "<group>";
@@ -1348,6 +1353,7 @@
 				9044A1981537FBCD00C3F855 /* Stage.cpp in Sources */,
 				907E4608154CA77A0022C717 /* CCParallaxNodeExtras.cpp in Sources */,
 				907E4663154CFF450022C717 /* ChaseStage.cpp in Sources */,
+				90B91B65154DC3D6000863DB /* RunningWolf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
