@@ -11,6 +11,8 @@
 
 #include "SheepGame.h"
 
+USING_NS_CC;
+
 class Actor;
 typedef cocos2d::CCMutableArray<Actor*> ActorArray;
 

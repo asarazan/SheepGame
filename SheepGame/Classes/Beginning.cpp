@@ -10,6 +10,7 @@
 #include "Boy.h"
 #include "Sheep.h"
 #include "Actor.h"
+#include "cocos2d.h"
 
 using namespace cocos2d;
 
@@ -18,7 +19,8 @@ bool Beginning::init() {
     if (!Stage::init()) {
         return false;
     }
-    
+            
+    /*
 	CCSize size = CCDirector::sharedDirector()->getWinSize();
     
     m_boy = new Boy();
@@ -36,6 +38,7 @@ bool Beginning::init() {
         float y = rand() % (int)size.height;        
         sheep->setPosition(ccp(x, y));
     }   
+    */
     
     return  true;
 }
