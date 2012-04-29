@@ -35,6 +35,9 @@ bool Stage::ccTouchBegan(cocos2d::CCTouch *pTouch, CCEvent *pEvent) {
     return true;
 }
 
+void Stage::ccTouchEnded(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent) {    
+}
+
 void Stage::addActor(Actor * actor) {
     m_actors.addObject(actor);
     addChild(actor);

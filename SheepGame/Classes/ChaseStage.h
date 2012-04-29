@@ -25,7 +25,8 @@ private:
     CCArray * m_clouds;
     CCArray * m_mountains;
     RunningWolf * m_wolf;
-    
+
+    float m_scale;
 public:
 	LAYER_NODE_FUNC(ChaseStage);
 	static Scene * scene(void);
@@ -33,6 +34,7 @@ public:
     
     virtual void update(ccTime dt);
     virtual bool ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+    virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
     
     virtual ~ChaseStage();
 };

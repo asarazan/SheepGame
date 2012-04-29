@@ -1,5 +1,5 @@
 /****************************************************************************
-Copyright (c) 2010-2012 cocos2d-x.org
+6Copyright (c) 2010-2012 cocos2d-x.org
 
 http://www.cocos2d-x.org
 

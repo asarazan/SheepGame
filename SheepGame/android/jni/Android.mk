@@ -13,6 +13,7 @@ LOCAL_SRC_FILES := helloworld/main.cpp \
 			../../Classes/CCParallaxNodeExtras.cpp \
 			../../Classes/Stage.cpp \
 			../../Classes/Actor.cpp \
+			../../Classes/RunningWolf.cpp \
 
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes                   
